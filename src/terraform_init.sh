@@ -1,6 +1,10 @@
 #!/bin/bash
 
 function terraformInit {
+  # Add github auth and rewrite SSH to HTTPS URLs
+  git config --global http.https://github.com/.extraheader 'AUTHORIZATION: basic $GITHUB_TOKEN'
+  git config --global url."https://github.com".insteadOf ssh://git@github.com
+
   # Gather the output of `terraform init`.
   echo "init: info: initializing Terraform configuration in ${tfWorkingDir}"
   initOutput=$(terraform init -input=false ${*} 2>&1)
