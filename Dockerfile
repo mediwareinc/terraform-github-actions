@@ -1,4 +1,4 @@
-FROM alpine:3 
+FROM wellsky/atlantis:1.0.0
 
 RUN ["/bin/sh", "-c", "apk add --update --no-cache bash ca-certificates curl git jq openssh"]
 
