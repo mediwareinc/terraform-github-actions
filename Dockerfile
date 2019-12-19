@@ -1,4 +1,4 @@
-FROM wellsky/atlantis:1.0.0
+FROM wellsky/infra-tools:1.2.0
 
 RUN ["/bin/sh", "-c", "apk add --update --no-cache bash ca-certificates curl git jq openssh"]
 
