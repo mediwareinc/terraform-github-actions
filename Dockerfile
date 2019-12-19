@@ -4,7 +4,7 @@ RUN ["/bin/sh", "-c", "apk add --update --no-cache bash ca-certificates curl git
 
 RUN ["/bin/sh", "-c", "mkdir -p /src"]
 
-RUN ["/bin/sh", "-c", "mkdir - ~/.terraform.d/plugins"]
+RUN ["/bin/sh", "-c", "mkdir -p ~/.terraform.d/plugins"]
 
 COPY ["src", "/src/"]
 
